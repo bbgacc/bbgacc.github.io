@@ -71,6 +71,8 @@
       color: #0d6efd;
     }
   </style>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
   <div class="container py-4">
@@ -93,8 +95,12 @@
   <h2 class="mb-4">برخی از ویژگی‌های نرم افزار</h2>
   <div class="row g-4">
     <div class="col-12 col-sm-6 col-md-4">
-      <img src="main.png" class="img-fluid rounded shadow-sm" alt="محیط ساده و جذاب">
+    <a href="main.png" class="glightbox" data-title="محیط ساده و جذاب">
+       <img src="main.png" class="img-fluid rounded shadow-sm" alt="محیط ساده و جذاب">
       <p class="mt-2">محیط کاربری روان و جذاب</p>
+    </a>
+      
+      
     </div>
     <div class="col-12 col-sm-6 col-md-4">
       <img src="management.png" class="img-fluid rounded shadow-sm" alt="فرمهای مدیریت">
@@ -211,5 +217,10 @@
       <p><strong>تلگرام:</strong> <a href="https://t.me/hr85sc">@hr85sc</a></p>
     </footer>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  const lightbox = GLightbox({ selector: '.glightbox' });
+</script>
 </body>
 </html>
