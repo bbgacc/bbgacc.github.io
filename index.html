@@ -267,28 +267,19 @@
       <p>توسعه نرم افزار چالش برانگیز است و حل مشکلات آن موجب ارتقای ذهنی برنامه نویس می گردد.</p>
     </section>
 
-    <section id="comments" class="mb-5">
-  <h2 class="text-center mb-4">نظرات کاربران</h2>
-  <div class="card shadow-sm">
-    <div class="card-body">
-      <form id="commentForm">
-        <div class="mb-3">
-          <label for="name" class="form-label">نام</label>
-          <input type="text" class="form-control" id="name" placeholder="نام شما" required>
-        </div>
-        <div class="mb-3">
-          <label for="comment" class="form-label">نظر شما</label>
-          <textarea class="form-control" id="comment" rows="3" placeholder="دیدگاه خود را بنویسید..." required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">ارسال نظر</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="mt-4">
-    <h5 class="mb-3">نظرات ثبت شده:</h5>
-    <ul id="commentList" class="list-group"></ul>
-  </div>
+  <section id="comments" class="mb-5 text-center">
+  <h2>نظرات کاربران</h2>
+  <script src="https://giscus.app/client.js"
+          data-repo="YourUserName/YourRepo"
+          data-repo-id="..."
+          data-category="General"
+          data-category-id="..."
+          data-mapping="pathname"
+          data-lang="fa"
+          data-theme="light"
+          crossorigin="anonymous"
+          async>
+  </script>
 </section>
 
     <footer class="text-center">
@@ -324,6 +315,7 @@
   
 </body>
 </html>
+
 
 
 
