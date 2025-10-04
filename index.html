@@ -31,6 +31,12 @@
 </script>
 
   <style>
+    #comments {
+  direction: rtl;
+}
+#commentList li {
+  text-align: right;
+}
     body {
       font-family: 'Vazirmatn', Tahoma, sans-serif;
       background-color: #f5f5f5;
@@ -261,6 +267,30 @@
       <p>توسعه نرم افزار چالش برانگیز است و حل مشکلات آن موجب ارتقای ذهنی برنامه نویس می گردد.</p>
     </section>
 
+    <section id="comments" class="mb-5">
+  <h2 class="text-center mb-4">نظرات کاربران</h2>
+  <div class="card shadow-sm">
+    <div class="card-body">
+      <form id="commentForm">
+        <div class="mb-3">
+          <label for="name" class="form-label">نام</label>
+          <input type="text" class="form-control" id="name" placeholder="نام شما" required>
+        </div>
+        <div class="mb-3">
+          <label for="comment" class="form-label">نظر شما</label>
+          <textarea class="form-control" id="comment" rows="3" placeholder="دیدگاه خود را بنویسید..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">ارسال نظر</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="mt-4">
+    <h5 class="mb-3">نظرات ثبت شده:</h5>
+    <ul id="commentList" class="list-group"></ul>
+  </div>
+</section>
+
     <footer class="text-center">
       <p>برای مشاوره از طریق تلگرام با ما در تماس باشید:</p>
       <p><strong>تلگرام:</strong> <a href="https://t.me/hr85sc">@hr85sc</a></p>
@@ -271,8 +301,30 @@
 <script>
   const lightbox = GLightbox({ selector: '.glightbox' });
 </script>
+
+  <script>
+  document.getElementById('commentForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+
+    if (name && comment) {
+      const commentList = document.getElementById('commentList');
+      const li = document.createElement('li');
+      li.className = 'list-group-item';
+      li.innerHTML = `<strong>${name}</strong>: ${comment}`;
+      commentList.prepend(li); // show newest comments first
+
+      // Reset form
+      document.getElementById('commentForm').reset();
+    }
+  });
+</script>
+  
 </body>
 </html>
+
 
 
 
