@@ -37,6 +37,13 @@
     #comments {
   direction: rtl;
 }
+
+.ltr {
+    direction: ltr;
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
+    
 #commentList li {
   text-align: right;
 }
@@ -320,29 +327,32 @@
       <p><strong>تلگرام:</strong> <a href="https://t.me/bbgacc">@bbgacc</a></p>
     </footer> -->
 
- <div class="d-flex justify-content-center flex-wrap gap-3">
+<div class="d-flex justify-content-center flex-wrap gap-3">
 
+  <!-- Telegram -->
   <a href="https://t.me/bbgacc"
      target="_blank"
      class="btn btn-primary btn-lg p-3">
       <i class="bi bi-telegram fs-4"></i><br>
       <strong>تلگرام</strong><br>
-      <small>@bbgacc</small>
+      <small><span class="ltr">@bbgacc</span></small>
   </a>
 
+  <!-- WhatsApp -->
   <a href="https://wa.me/989183832856"
      target="_blank"
      class="btn btn-success btn-lg p-3">
       <i class="bi bi-whatsapp fs-4"></i><br>
       <strong>واتساپ</strong><br>
-      <small>+98 918 383 2856</small>
+      <small><span class="ltr">+98 918 383 2856</span></small>
   </a>
 
+  <!-- Phone -->
   <a href="tel:+989183832856"
      class="btn btn-dark btn-lg p-3">
       <i class="bi bi-telephone-fill fs-4"></i><br>
       <strong>تماس</strong><br>
-      <small>0918 383 2856</small>
+      <small><span class="ltr">0918 383 2856</span></small>
   </a>
 
 </div>
